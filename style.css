@@ -120,6 +120,7 @@ body {
 .box h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 0px;
 }
 
 .box h3 {
@@ -148,6 +149,12 @@ body {
     color: #444;
     background-color: white;
 }
+
+#image {
+    width: auto;
+    height: 300px;
+}
+
 
 @media only screen and (max-device-width: 428px) {
     body {}
