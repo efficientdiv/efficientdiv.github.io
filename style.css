@@ -75,17 +75,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media only screen and (max-device-width: 428px) {
-    .main {
-        display: flex;
-        flex-direction: column;
-        font-size: 8rem;
-        color: rgb(0, 140, 255);
-        height: 50rem;
-    }
-
-
-}
 
 .first-line {}
 
@@ -161,4 +150,49 @@ body {
 .box a:hover {
     color: #444;
     background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 428px) {
+
+
+    body {
+        width: 100%;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        font-size: 8rem;
+        color: rgb(0, 140, 255);
+        height: 30rem;
+    }
+
+
+    .projects {
+        grid-area: projects;
+        height: 1400px;
+        background-color: #f0f0f0;
+    }
+
+    .box a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        background-color: #444;
+        padding: 10px 20px;
+        border-radius: 10px;
+
+    }
+
 }
