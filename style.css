@@ -6,6 +6,8 @@ html {
 
 body {
     margin: 0;
+    background-color: rgba(255, 255, 240, 0.700);
+
 }
 
 .container {
@@ -181,7 +183,7 @@ body {
 
     .projects {
         grid-area: projects;
-        height: 1400px;
+        height: 1500px;
         background-color: #f0f0f0;
     }
 
