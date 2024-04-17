@@ -33,6 +33,12 @@ body {
     justify-self: center;
     font-size: 30px;
     font-family: Playfair Display;
+
+}
+
+.name a {
+    text-decoration: none;
+    color: #333;
 }
 
 .name::after {
@@ -53,6 +59,11 @@ body {
 .links a {
     text-decoration: none;
     color: #333;
+    font-size: 16px;
+}
+
+.links a:hover {
+    color: gray;
 }
 
 .main {
@@ -61,6 +72,7 @@ body {
     font-size: 12rem;
     margin-left: 5rem;
     margin-bottom: 10rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media only screen and (max-device-width: 428px) {
@@ -68,16 +80,19 @@ body {
         display: flex;
         flex-direction: column;
         font-size: 8rem;
-        color: red;
+        color: rgb(0, 140, 255);
         height: 50rem;
     }
 
 
 }
 
+.first-line {}
+
 .second-line {
     opacity: 0;
     animation: pop-up 1.5s forwards;
+    font-weight: bold;
 }
 
 @keyframes pop-up {
@@ -94,7 +109,7 @@ body {
 
 .projects {
     grid-area: projects;
-    height: 1000px;
+    height: 1200px;
     background-color: #f0f0f0;
 }
 
@@ -106,38 +121,36 @@ body {
     transition: opacity 1s ease;
 }
 
-
-/* Existing CSS code remains unchanged */
-
 .section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px;
+    padding: 3rem;
 }
 
 .box {
     flex: 1;
-    padding: 20px;
-    background-color: #333;
+    /* padding: 20px; */
+    padding: 3rem;
+    background-color: #4d4d4d;
     color: white;
 }
 
 .box h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .box h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .box p {
     margin-bottom: 20px;
 }
 
-/* a {
+.box a {
     color: white;
     text-decoration: none;
     background-color: #444;
@@ -145,6 +158,7 @@ body {
     border-radius: 5px;
 }
 
-a:hover {
-    background-color: #555;
-} */
+.box a:hover {
+    color: #444;
+    background-color: white;
+}
