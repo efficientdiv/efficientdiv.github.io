@@ -152,7 +152,6 @@ body {
 
     .navbar {
         flex-direction: column;
-
     }
 
     .name {
@@ -160,12 +159,21 @@ body {
     }
 
     .main {
-        font-size: 8rem;
+        font-size: 6rem;
         color: rgb(0, 140, 255);
         height: 30rem;
+        padding-left: 2rem;
+    }
+
+    .links {
+        padding: 0rem;
     }
 
     .projects {
-        height: 1500px;
+        height: 1250px;
+    }
+
+    #image {
+        display: none;
     }
 }
