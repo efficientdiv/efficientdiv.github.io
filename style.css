@@ -7,35 +7,25 @@ html {
 body {
     margin: 0;
     background-color: rgba(255, 255, 240, 0.700);
-
 }
 
 .container {
-    display: grid;
-    grid-template:
-        'navbar navbar navbar'
-        'main main main'
-        'projects projects projects';
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
-    display: grid;
-    grid-template:
-        'name blank blank blank links';
-    grid-area: navbar;
-    align-content: space-evenly;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    margin: 3rem 0rem 7rem 0rem;
+    justify-content: space-between;
+    padding: 4rem 5rem;
 }
 
 .name {
-    display: grid;
-    grid-area: name;
-    display: inline-flex;
-    justify-self: center;
+    margin-bottom: 1rem;
     font-size: 30px;
     font-family: Playfair Display;
-
 }
 
 .name a {
@@ -49,10 +39,10 @@ body {
 }
 
 .links {
-    grid-area: links;
-    display: inline-flex;
-    justify-self: center;
-    grid-gap: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     list-style-type: none;
     text-decoration: none;
     font: roboto;
@@ -69,14 +59,15 @@ body {
 }
 
 .main {
-    display: grid;
-    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5rem;
     font-size: 12rem;
-    margin-left: 5rem;
     margin-bottom: 10rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 .first-line {}
 
@@ -99,7 +90,6 @@ body {
 }
 
 .projects {
-    grid-area: projects;
     height: 1200px;
     background-color: #f0f0f0;
 }
@@ -121,10 +111,10 @@ body {
 
 .box {
     flex: 1;
-    /* padding: 20px; */
     padding: 3rem;
     background-color: #4d4d4d;
     color: white;
+    border-radius: 10px;
 }
 
 .box h2 {
@@ -142,11 +132,13 @@ body {
 }
 
 .box a {
+    display: block;
+    margin-top: 1rem;
     color: white;
     text-decoration: none;
     background-color: #444;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .box a:hover {
@@ -154,47 +146,26 @@ body {
     background-color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-device-width: 428px) {
+    body {}
 
 
-    body {
-        width: 100%;
+    .navbar {
+        flex-direction: column;
+
+    }
+
+    .name {
+        align-items: center;
     }
 
     .main {
-        display: flex;
-        flex-direction: column;
         font-size: 8rem;
         color: rgb(0, 140, 255);
         height: 30rem;
     }
 
-
     .projects {
-        grid-area: projects;
         height: 1500px;
-        background-color: #f0f0f0;
     }
-
-    .box a {
-        display: block;
-        color: white;
-        text-decoration: none;
-        background-color: #444;
-        padding: 10px 20px;
-        border-radius: 10px;
-
-    }
-
 }
