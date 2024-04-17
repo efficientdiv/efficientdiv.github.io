@@ -1,0 +1,150 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template:
+        'navbar navbar navbar'
+        'main main main'
+        'projects projects projects';
+}
+
+.navbar {
+    display: grid;
+    grid-template:
+        'name blank blank blank links';
+    grid-area: navbar;
+    align-content: space-evenly;
+    align-items: center;
+    margin: 3rem 0rem 7rem 0rem;
+}
+
+.name {
+    display: grid;
+    grid-area: name;
+    display: inline-flex;
+    justify-self: center;
+    font-size: 30px;
+    font-family: Playfair Display;
+}
+
+.name::after {
+    content: ".";
+    color: red;
+}
+
+.links {
+    grid-area: links;
+    display: inline-flex;
+    justify-self: center;
+    grid-gap: 1rem;
+    list-style-type: none;
+    text-decoration: none;
+    font: roboto;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    font-size: 12rem;
+    margin-left: 5rem;
+    margin-bottom: 10rem;
+}
+
+@media only screen and (max-device-width: 428px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        font-size: 8rem;
+        color: red;
+        height: 50rem;
+    }
+
+
+}
+
+.second-line {
+    opacity: 0;
+    animation: pop-up 1.5s forwards;
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-70rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects {
+    grid-area: projects;
+    height: 1000px;
+    background-color: #f0f0f0;
+}
+
+.placeholder {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+/* Existing CSS code remains unchanged */
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.box h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin-bottom: 20px;
+}
+
+/* a {
+    color: white;
+    text-decoration: none;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #555;
+} */
