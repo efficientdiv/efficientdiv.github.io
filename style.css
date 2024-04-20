@@ -172,25 +172,19 @@ body {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
 
-    .name {
-        align-items: center;
-        width: fit-content;
-        font-size: 1.6rem;
-
-    }
+    .name {}
 
     .main {
-        font-size: 6rem;
-        color: rgb(0, 140, 255);
-        height: 30rem;
-        padding-left: 2rem;
+
+        color: rgb(139, 255, 182);
+
     }
 
 }
 
 
 
-@media only screen and (max-device-width: 428px) {
+@media only screen and (max-device-width: 767px) {
     body {}
 
 
@@ -202,7 +196,7 @@ body {
         align-items: center;
         width: fit-content;
         font-size: 1.6rem;
-
+        width: max-content;
     }
 
     .main {
@@ -214,10 +208,17 @@ body {
 
     .links {
         padding: 0rem;
+        column-gap: 2rem;
+        justify-content: space-between;
+        width: fit-content;
     }
 
     .projects {
-        height: 1250px;
+        height: 1500px;
+    }
+
+    .box {
+        padding: 20px;
     }
 
     #image {
