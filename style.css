@@ -100,7 +100,7 @@ body {
 }
 
 .projects {
-    height: 1200px;
+    height: fit-content;
     background-color: #f0f0f0;
 }
 
@@ -118,7 +118,6 @@ body {
     align-items: center;
     padding: 3rem;
     position: relative;
-    /* Add this line */
 }
 
 .box {
@@ -191,26 +190,15 @@ body {
 }
 
 
-
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-
-    .name {}
-
     .main {
-
-        color: rgb(139, 255, 182);
-
+        /* color: rgb(139, 255, 182); */
     }
-
 }
 
 
-
 @media only screen and (max-device-width: 767px) {
-    body {}
-
 
     .navbar {
         flex-direction: column;
@@ -225,7 +213,7 @@ body {
 
     .main {
         font-size: 6rem;
-        color: rgb(0, 140, 255);
+        /* color: rgb(0, 140, 255); */
         height: 30rem;
         padding-left: 2rem;
     }
@@ -237,12 +225,12 @@ body {
         width: fit-content;
     }
 
-    .projects {
-        height: 1500px;
+    .box {
+        padding: 2rem;
     }
 
-    .box {
-        padding: 20px;
+    .box p {
+        width: 100%;
     }
 
     #image {
