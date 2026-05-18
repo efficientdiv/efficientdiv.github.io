@@ -1,95 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>My Portfolio.</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="navbar">
-            <div class="name" "><a href="">Dimitar's Portfolio</a></div>
-            <ul class=" links">
+            <div class="name"><a href="">Dimitar's Portfolio</a></div>
+            <ul class="links">
                 <li><a href="">Home</a></li>
                 <li><a href="https://github.com/efficientdiv">About</a></li>
-                <li><a href="mailto:your.email@example.com">Contact</a></li>
-                </ul>
-            </div>
-            <div class="main">
-                <div class="first-line">
-                    Hey,
-                </div>
-                <div class="second-line">
-                    There
-                </div>
-            </div>
-            <div class="projects">
-
-                <div class="section">
-
-                    <div class="box">
-
-                        <h2>01</h2>
-                        <h3>Shooting stars game</h3>
-                        <p>A lightweight HTML5 game built with PixiJS v8, featuring real-time rendering on Canvas,
-                            keyboard & touch controls, procedural object generation, collision detection, scoring
-                            system, and responsive design. Deployed on Netlify.</p>
-                        <a href="https://shooting-stars1.netlify.app/">Play the game</a>
-                        <img src="./Media/shooting-stars.png" id="image" alt="Placeholder Image">
-
-
-                    </div>
-
-
-
-                </div>
-
-                <div class="section">
-                    <div class="box">
-                        <h2>02</h2>
-                        <h3>React app</h3>
-                        <p>Dive into React app clone of Netflix, a dynamic and user-friendly platform designed to
-                            replicate the renowned streaming service with a sleek design and robust functionality.
-                            Explore a seamless interface that mirrors the Netflix experience, complete with personalized
-                            recommendations and intuitive navigation.</p>
-                        <a href="https://github.com/efficientdiv">View Project</a>
-                        <img src="./Media/React-app.jpg" id="image" alt="Placeholder Image">
-
-                    </div>
-
-                </div>
-
-                <div class="section">
-                    <div class="box">
-                        <h2>03</h2>
-                        <h3>Fire Safety Simulation
-                        </h3>
-                        <p>Immerse yourself in Interactive Unity 3D VR experience designed to educate users about the
-                            diverse types
-                            of fire extinguishers. Explore scenarios where different classes of fires
-                            emerge, guiding users to select the appropriate extinguishing agent. With lifelike
-                            simulations and hands-on experiences, users gain invaluable knowledge to effectively respond
-                            to fire emergencies.</p>
-                        <a href="https://github.com/efficientdiv">View Project</a>
-                        <img src="./Media/Fire-VR.png" id="image" alt="Placeholder Image">
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="footer">
-
-            </div>
+                <li><a href="mailto:samuraieddyhd@gmail.com">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
         </div>
 
-        <script src="script.js"></script>
+        <div class="main">
+            <div class="first-line">Hey,</div>
+            <div class="second-line"><span id="typed-text"></span></div>
+        </div>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail">
+                            <img src="./Media/shooting-stars.png" alt="Shooting Stars Game">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-number">01</span>
+                            <h3>Shooting Stars Game</h3>
+                            <p>HTML5 game built with PixiJS v8 — real-time Canvas rendering, keyboard & touch controls, collision detection.</p>
+                            <a href="https://shooting-stars1.netlify.app/">Play the game</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// stack</span>
+                            <p>PixiJS v8 · Canvas API · Netlify</p>
+                            <span class="fact-label">// note</span>
+                            <p>60fps WebGL batch rendering on any device. Try surviving past level 10.</p>
+                            <a href="https://shooting-stars1.netlify.app/" class="back-link">Play it →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail">
+                            <img src="./Media/React-app.jpg" alt="Netflix React Clone">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-number">02</span>
+                            <h3>Netflix React Clone</h3>
+                            <p>React clone of Netflix with a sleek design, personalized recommendations, and intuitive navigation.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// stack</span>
+                            <p>React · Hooks · TMDB API</p>
+                            <span class="fact-label">// note</span>
+                            <p>Pulls live movie data — 10,000+ titles updated daily from the TMDB catalogue.</p>
+                            <a href="https://github.com/efficientdiv" class="back-link">View code →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail">
+                            <img src="./Media/Fire-VR.png" alt="Fire Safety VR">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-number">03</span>
+                            <h3>Fire Safety VR</h3>
+                            <p>Unity 3D VR experience teaching users about fire extinguisher types through interactive simulations.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// stack</span>
+                            <p>Unity 3D · C# · XR Toolkit</p>
+                            <span class="fact-label">// impact</span>
+                            <p>VR training cuts real-world error rates by up to 40% vs traditional classroom methods.</p>
+                            <a href="https://github.com/efficientdiv" class="back-link">View code →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail project-thumbnail--empty"></div>
+                        <div class="project-info">
+                            <span class="project-number">04</span>
+                            <h3>Coming Soon</h3>
+                            <p>Next project in progress — stay tuned.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// dev fact</span>
+                            <p>The first computer bug was a real moth. Found inside a Harvard Mark II in 1947. The log entry reads: "First actual case of bug being found."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail project-thumbnail--empty"></div>
+                        <div class="project-info">
+                            <span class="project-number">05</span>
+                            <h3>Coming Soon</h3>
+                            <p>Next project in progress — stay tuned.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// dev fact</span>
+                            <p>The first website ever made is still live at info.cern.ch. It has zero CSS. Pure HTML. Peak minimalism.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail project-thumbnail--empty"></div>
+                        <div class="project-info">
+                            <span class="project-number">06</span>
+                            <h3>Coming Soon</h3>
+                            <p>Next project in progress — stay tuned.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// dev fact</span>
+                            <p>There are ~700 programming languages in existence. Most of them will haunt your dreams at some point.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail project-thumbnail--empty"></div>
+                        <div class="project-info">
+                            <span class="project-number">07</span>
+                            <h3>Coming Soon</h3>
+                            <p>Next project in progress — stay tuned.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// dev fact</span>
+                            <p>Linus Torvalds wrote the first version of Git in 10 days. Then he named it after himself. Classic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail project-thumbnail--empty"></div>
+                        <div class="project-info">
+                            <span class="project-number">08</span>
+                            <h3>Coming Soon</h3>
+                            <p>Next project in progress — stay tuned.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// dev fact</span>
+                            <p>Stack Overflow has been the answer to "how to center a div" since 2008. The question never gets old.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="project-thumbnail project-thumbnail--empty"></div>
+                        <div class="project-info">
+                            <span class="project-number">09</span>
+                            <h3>Coming Soon</h3>
+                            <p>Next project in progress — stay tuned.</p>
+                            <a href="https://github.com/efficientdiv">View Project</a>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <span class="fact-label">// dev fact</span>
+                            <p>The average modern webpage is heavier than the entire Apollo 11 guidance software. We did this.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
