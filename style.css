@@ -181,6 +181,24 @@ body {
     color: var(--hero-text);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: color 0.4s ease;
+    position: relative;
+}
+
+/* Grain texture overlay on hero */
+.main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='280' height='280' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.045;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.first-line,
+.second-line {
+    position: relative;
+    z-index: 1;
 }
 
 .first-line {
@@ -437,6 +455,48 @@ body {
     background: var(--cursor-color);
     box-shadow: 0 0 10px var(--cursor-glow);
     will-change: transform;
+}
+
+/* ── Scroll progress bar ───────────────────────────────────── */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: red;
+    z-index: 10000;
+    transition: width 0.08s linear;
+}
+
+/* ── Back to top ───────────────────────────────────────────── */
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--toggle-bg);
+    color: var(--toggle-text);
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#backToTop.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#backToTop:hover {
+    transform: translateY(-3px);
 }
 
 /* ── Touch: tap to flip ────────────────────────────────────── */

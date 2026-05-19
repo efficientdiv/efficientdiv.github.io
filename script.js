@@ -11,6 +11,27 @@ toggle.addEventListener('click', () => {
     if (toggleHint) toggleHint.classList.add('dismissed');
 });
 
+// ── Scroll progress bar + back-to-top ───────────────────────────────
+const progressBar = document.getElementById('progress-bar');
+const backToTop   = document.getElementById('backToTop');
+const heroSection = document.querySelector('.main');
+
+window.addEventListener('scroll', () => {
+    const scrolled   = window.scrollY;
+    const maxScroll  = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (scrolled / maxScroll * 100) + '%';
+
+    if (scrolled > heroSection.offsetHeight) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+}, { passive: true });
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 // ── Typed.js hero ────────────────────────────────────────────────────
 new Typed('#typed-text', {
     strings: ['I build games.', 'I build apps.', 'I build experiences.'],
