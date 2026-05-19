@@ -2,10 +2,13 @@
 const toggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
+const toggleHint = document.getElementById('toggleHint');
+
 toggle.addEventListener('click', () => {
     const isDark = html.dataset.theme === 'dark';
     html.dataset.theme = isDark ? 'light' : 'dark';
     toggle.textContent = isDark ? '◐' : '◑';
+    if (toggleHint) toggleHint.classList.add('dismissed');
 });
 
 // ── Typed.js hero ────────────────────────────────────────────────────

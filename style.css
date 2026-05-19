@@ -100,6 +100,54 @@ body {
 }
 
 /* ── Theme toggle ──────────────────────────────────────────── */
+.toggle-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.toggle-hint {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--toggle-bg);
+    color: var(--toggle-text);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    animation: hint-in 6s ease forwards;
+    animation-delay: 1.8s;
+    z-index: 100;
+}
+
+.toggle-hint::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-bottom-color: var(--toggle-bg);
+}
+
+.toggle-hint.dismissed {
+    animation: none;
+    opacity: 0;
+}
+
+@keyframes hint-in {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(4px); }
+    12%  { opacity: 1; transform: translateX(-50%) translateY(0);   }
+    80%  { opacity: 1; transform: translateX(-50%) translateY(0);   }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-3px);}
+}
+
 .theme-toggle {
     background: var(--toggle-bg);
     color: var(--toggle-text);
