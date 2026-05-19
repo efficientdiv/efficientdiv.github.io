@@ -286,13 +286,19 @@ body {
     background-color: var(--card-thumb-bg);
 }
 
-.project-thumbnail img {
+.project-thumbnail img,
+.project-thumbnail video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
     display: block;
 }
+
+/* Finance dashboard: swap image on theme change */
+.finance-thumbnail .img-dark  { display: none; }
+[data-theme="dark"] .finance-thumbnail .img-light { display: none; }
+[data-theme="dark"] .finance-thumbnail .img-dark  { display: block; }
 
 .project-thumbnail--empty {
     background: repeating-linear-gradient(
@@ -352,6 +358,24 @@ body {
 .project-info a:hover {
     background-color: var(--card-btn-hover-bg);
     color: var(--card-btn-hover-text);
+}
+
+.project-status {
+    display: inline-block;
+    color: #666;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.pending-note {
+    color: #7a9ab8 !important;
+    font-style: italic;
 }
 
 /* ── Cursor trail ──────────────────────────────────────────── */

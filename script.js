@@ -37,8 +37,21 @@ cards.forEach((card, i) => {
     revealObserver.observe(card);
 });
 
-// ── Touch flip (tap to flip, tap again to unflip) ───────────────────
+// ── Click to navigate (desktop — hover devices only) ────────────────
 const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
+if (!isTouchDevice) {
+    cards.forEach(card => {
+        const url = card.dataset.url;
+        if (!url) return;
+        card.addEventListener('click', e => {
+            if (e.target.closest('a')) return; // let actual link buttons handle themselves
+            window.open(url, '_blank', 'noopener');
+        });
+    });
+}
+
+// ── Touch flip (tap to flip, tap again to unflip) ───────────────────
 
 if (isTouchDevice) {
     cards.forEach(card => {

@@ -14,8 +14,6 @@
         <div class="navbar">
             <div class="name"><a href="">Dimitar's Portfolio</a></div>
             <ul class="links">
-                <li><a href="">Home</a></li>
-                <li><a href="https://github.com/efficientdiv">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">◐</button>
@@ -28,57 +26,63 @@
 
         <div class="projects">
 
-            <div class="project-card">
+            <!-- 01 — WeeklyScore -->
+            <div class="project-card" data-url="https://weeklyscore.app/">
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="project-thumbnail">
-                            <img src="./Media/shooting-stars.png" alt="Shooting Stars Game">
+                            <video autoplay muted loop playsinline>
+                                <source src="./Media/Weekly-Score-demo.mp4" type="video/mp4">
+                            </video>
                         </div>
                         <div class="project-info">
                             <span class="project-number">01</span>
-                            <h3>Shooting Stars Game</h3>
-                            <p>HTML5 game built with PixiJS v8 — real-time Canvas rendering, keyboard & touch controls, collision detection.</p>
-                            <a href="https://shooting-stars1.netlify.app/">Play the game</a>
+                            <h3>WeeklyScore</h3>
+                            <p>A weekly self-scoring system that turns your habits and goals into one honest number per week.</p>
+                            <a href="https://weeklyscore.app/" target="_blank" rel="noopener">Visit site</a>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
-                            <span class="fact-label">// stack</span>
-                            <p>PixiJS v8 · Canvas API · Netlify</p>
-                            <span class="fact-label">// note</span>
-                            <p>60fps WebGL batch rendering on any device. Try surviving past level 10.</p>
-                            <a href="https://shooting-stars1.netlify.app/" class="back-link">Play it →</a>
+                            <span class="fact-label">// about</span>
+                            <p>No streaks to game, no daily pressure — just an honest weekly review of how you actually lived.</p>
+                            <span class="fact-label">// dev fact</span>
+                            <p>Weekly reviews are 3× more effective than daily tracking for long-term habit retention.</p>
+                            <a href="https://weeklyscore.app/" target="_blank" rel="noopener" class="back-link">Visit site →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
+            <!-- 02 — Finance Dashboard -->
+            <div class="project-card" data-url="https://finance-app-livid-five.vercel.app/">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div class="project-thumbnail">
-                            <img src="./Media/React-app.jpg" alt="Netflix React Clone">
+                        <div class="project-thumbnail finance-thumbnail">
+                            <img src="./Media/finance-light.png" class="img-light" alt="Finance Dashboard Light">
+                            <img src="./Media/finance-dark.png"  class="img-dark"  alt="Finance Dashboard Dark">
                         </div>
                         <div class="project-info">
                             <span class="project-number">02</span>
-                            <h3>Netflix React Clone</h3>
-                            <p>React clone of Netflix with a sleek design, personalized recommendations, and intuitive navigation.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <h3>Finance Dashboard</h3>
+                            <p>Personal finance dashboard with live net worth tracking, expense breakdown, and investment overview.</p>
+                            <a href="https://finance-app-livid-five.vercel.app/" target="_blank" rel="noopener">View app</a>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
                             <span class="fact-label">// stack</span>
-                            <p>React · Hooks · TMDB API</p>
-                            <span class="fact-label">// note</span>
-                            <p>Pulls live movie data — 10,000+ titles updated daily from the TMDB catalogue.</p>
-                            <a href="https://github.com/efficientdiv" class="back-link">View code →</a>
+                            <p>React · Chart.js · Vercel</p>
+                            <span class="fact-label">// dev fact</span>
+                            <p>The average person checks their bank balance 3× a week. A good dashboard cuts that to once.</p>
+                            <a href="https://finance-app-livid-five.vercel.app/" target="_blank" rel="noopener" class="back-link">View app →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card">
+            <!-- 03 — Fire Safety VR -->
+            <div class="project-card" data-url="https://github.com/efficientdiv">
                 <div class="card-inner">
                     <div class="card-front">
                         <div class="project-thumbnail">
@@ -88,21 +92,22 @@
                             <span class="project-number">03</span>
                             <h3>Fire Safety VR</h3>
                             <p>Unity 3D VR experience teaching users about fire extinguisher types through interactive simulations.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <a href="https://github.com/efficientdiv" target="_blank" rel="noopener">View project</a>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
                             <span class="fact-label">// stack</span>
                             <p>Unity 3D · C# · XR Toolkit</p>
-                            <span class="fact-label">// impact</span>
-                            <p>VR training cuts real-world error rates by up to 40% vs traditional classroom methods.</p>
-                            <a href="https://github.com/efficientdiv" class="back-link">View code →</a>
+                            <span class="fact-label">// dev fact</span>
+                            <p>VR training cuts real-world error rates by up to 40% compared to traditional classroom methods.</p>
+                            <a href="https://github.com/efficientdiv" target="_blank" rel="noopener" class="back-link">View code →</a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 04 -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -110,19 +115,22 @@
                         <div class="project-info">
                             <span class="project-number">04</span>
                             <h3>Coming Soon</h3>
-                            <p>Next project in progress — stay tuned.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <p>Project currently in development — drop back soon.</p>
+                            <span class="project-status">Pending</span>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
+                            <span class="fact-label">// status</span>
+                            <p class="pending-note">Project pending — more to come.</p>
                             <span class="fact-label">// dev fact</span>
-                            <p>The first computer bug was a real moth. Found inside a Harvard Mark II in 1947. The log entry reads: "First actual case of bug being found."</p>
+                            <p>The first computer bug was a real moth — found inside Harvard's Mark II in 1947. The log reads: "First actual case of bug being found."</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 05 -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -130,19 +138,22 @@
                         <div class="project-info">
                             <span class="project-number">05</span>
                             <h3>Coming Soon</h3>
-                            <p>Next project in progress — stay tuned.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <p>Project currently in development — drop back soon.</p>
+                            <span class="project-status">Pending</span>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
+                            <span class="fact-label">// status</span>
+                            <p class="pending-note">Project pending — more to come.</p>
                             <span class="fact-label">// dev fact</span>
-                            <p>The first website ever made is still live at info.cern.ch. It has zero CSS. Pure HTML. Peak minimalism.</p>
+                            <p>The first website is still live at info.cern.ch — zero CSS, pure HTML, built by Tim Berners-Lee in 1991.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 06 -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -150,19 +161,22 @@
                         <div class="project-info">
                             <span class="project-number">06</span>
                             <h3>Coming Soon</h3>
-                            <p>Next project in progress — stay tuned.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <p>Project currently in development — drop back soon.</p>
+                            <span class="project-status">Pending</span>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
+                            <span class="fact-label">// status</span>
+                            <p class="pending-note">Project pending — more to come.</p>
                             <span class="fact-label">// dev fact</span>
-                            <p>There are ~700 programming languages in existence. Most of them will haunt your dreams at some point.</p>
+                            <p>JavaScript was written in 10 days. Its creator Brendan Eich later said he wished he'd had more time.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 07 -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -170,19 +184,22 @@
                         <div class="project-info">
                             <span class="project-number">07</span>
                             <h3>Coming Soon</h3>
-                            <p>Next project in progress — stay tuned.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <p>Project currently in development — drop back soon.</p>
+                            <span class="project-status">Pending</span>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
+                            <span class="fact-label">// status</span>
+                            <p class="pending-note">Project pending — more to come.</p>
                             <span class="fact-label">// dev fact</span>
-                            <p>Linus Torvalds wrote the first version of Git in 10 days. Then he named it after himself. Classic.</p>
+                            <p>Linus Torvalds wrote Git in 10 days and named it after himself. "Git" is British slang for an unpleasant person — intentional.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 08 -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -190,19 +207,22 @@
                         <div class="project-info">
                             <span class="project-number">08</span>
                             <h3>Coming Soon</h3>
-                            <p>Next project in progress — stay tuned.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <p>Project currently in development — drop back soon.</p>
+                            <span class="project-status">Pending</span>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
+                            <span class="fact-label">// status</span>
+                            <p class="pending-note">Project pending — more to come.</p>
                             <span class="fact-label">// dev fact</span>
-                            <p>Stack Overflow has been the answer to "how to center a div" since 2008. The question never gets old.</p>
+                            <p>The Apollo 11 guidance computer had 4KB of RAM and 32KB of storage. Your browser tab uses more just to render a favicon.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- 09 -->
             <div class="project-card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -210,14 +230,16 @@
                         <div class="project-info">
                             <span class="project-number">09</span>
                             <h3>Coming Soon</h3>
-                            <p>Next project in progress — stay tuned.</p>
-                            <a href="https://github.com/efficientdiv">View Project</a>
+                            <p>Project currently in development — drop back soon.</p>
+                            <span class="project-status">Pending</span>
                         </div>
                     </div>
                     <div class="card-back">
                         <div class="card-back-content">
+                            <span class="fact-label">// status</span>
+                            <p class="pending-note">Project pending — more to come.</p>
                             <span class="fact-label">// dev fact</span>
-                            <p>The average modern webpage is heavier than the entire Apollo 11 guidance software. We did this.</p>
+                            <p>The average developer spends 35% of their time debugging — the other 65% is spent unknowingly creating new bugs.</p>
                         </div>
                     </div>
                 </div>
